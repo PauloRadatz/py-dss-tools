@@ -21,5 +21,5 @@ dss_tools.model.summary_df()
 dss_tools.model.add_line_in_vsource(add_meter=True)
 dss.text("solve")
 dss_tools.dss_view.voltage_profile()
-
+#teste
 print("here")
