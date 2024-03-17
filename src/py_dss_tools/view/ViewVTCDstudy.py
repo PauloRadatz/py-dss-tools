@@ -4,15 +4,16 @@
 # @File    : ViewVTCDstudy.py
 # @Software: PyCharm
 
-from py_dss_tools.view.VTCDbusesNameTag import VTCDbusesNameTag
+from py_dss_tools.view.VTCDSagCircuit import VTCDSagCircuit
 from py_dss_interface import DSS
 from py_dss_tools.results.VTCDresults import VTCDresults
 
 
-class ViewVTCDresults(VTCDbusesNameTag):
+class ViewVTCDresults(VTCDSagCircuit):
 
     def __init__(self, dss: DSS, results: VTCDresults):
-        VTCDbusesNameTag.__init__(self, dss, results)
+        VTCDSagCircuit.__init__(self, dss, results)
+
 
 
         # self._dss = dss #estava aqui, mas está tomando conta dentro da classe VTCbusesNameTag
