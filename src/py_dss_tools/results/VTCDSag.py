@@ -1,4 +1,8 @@
-
+# -*- coding: utf-8 -*-
+# @Author  : Raphael Maccari
+# @Email   : raphaelmaccari@gmail.com
+# @File    : VTCDSag.py
+# @Software: PyCharm
 
 
 import pandas as pd
@@ -10,6 +14,7 @@ class VTCDSag:
 
     def __init__(self, dss: DSS):
         self._dss = dss
+        self.vmags_df = pd.DataFrame()
 
     def sag_3phsc_df_pu(self, bus_fault,v_1=0.1, v_2=0.5, v_3=0.95) -> pd.DataFrame:
         self._bus_fault = bus_fault
@@ -35,12 +40,6 @@ class VTCDSag:
 
         vmags_df['colors'] = colors
 
-        # Necessito que o codigo abaixo que utiliza o vmags_df acima seja executado em outro arquivo dentro de uma classe.
-        # for index, row in vmags_df.iterrows():
-        #     bus_name = index  # Obtém o valor da primeira coluna (bus_name)
-        #     color = row.iloc[-1]  # Obtém o valor da última coluna (color)
-        #     self._dss.text(f"AddBusMarker Bus={bus_name} code=7 color={color} size=10")
-        # self._dss.text("plot circuit Power max=2000 n y C1=$00FF0000")
-        ###################################
+        self.vmags_df = vmags_df
 
         return vmags_df

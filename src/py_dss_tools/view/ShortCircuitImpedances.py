@@ -19,6 +19,7 @@ class ShortCircuitImpedances:
 
         self._plot_style = CustomPlotStyle()
 
+
     @property
     def short_circuit_impedances_plot_style(self):
         return self._plot_style
