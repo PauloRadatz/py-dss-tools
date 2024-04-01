@@ -35,7 +35,7 @@ class VTCDSagSwellCircuit:
 
         time.sleep(1)
 
-        self._dss.text(f"ClearBusMarkers") # Fiz isso não repetir os
+        self._dss.text(f"ClearBusMarkers") # Fiz isso não repetir as cores
 
         for index, row in vmags_df_circuit.iterrows():
             bus_name = index  # Obtém o valor da primeira coluna (bus_name)
