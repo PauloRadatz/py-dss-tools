@@ -19,15 +19,19 @@ study.dss.text(f"Buscoords Buscoords.dat")
 study.dss.text("batchedit regcontrol..* enabled=No")
 study.dss.text("batchedit load..* enabled=No")
 
-study.results.sag_3phsc_df_pu("95") #ver com o Paulo sobre as barras mono, pois curto 3ph em barra mono não está funcionando
+study.results.sag_3phsc_df_pu("95")
 study.view.vtcd_sag_circuit()
 
-# study.results.sag_swell_1phsc_df_pu("95")
-# study.view.vtcd_sag_swell_circuit()
+study.results.sag_swell_1phsc_df_pu("95")
+study.view.vtcd_sag_swell_circuit()
 
-# study.results.bus_vulnerability_sag_map_sc3ph("52", dss_file)
-# study.view.vtcd_vulnerability_circuit_sc3ph()
-# study.results.bus_vulnerability_sag_swell_map_sc1ph("52", dss_file)
-# study.view.vtcd_vulnerability_circuit_sc1ph()
+study.results.bus_vulnerability_sag_map_sc3ph("52", dss_file)
+study.view.vtcd_vulnerability_circuit_sc3ph()
+
+study.results.bus_vulnerability_sag_swell_map_sc1ph("52", dss_file)
+study.view.vtcd_vulnerability_circuit_sc1ph()
 
 print("here")
+
+
+

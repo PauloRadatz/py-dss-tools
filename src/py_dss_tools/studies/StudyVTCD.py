@@ -14,10 +14,9 @@ class StudyVTCD(StudyBase):
 
     def __post_init__(self):
         super().__post_init__()
-        self._results = VTCDresults(self._dss) # Object created by composition
-        self._view = ViewVTCDresults(self._dss, self._results) # não sei o motivo, mas é necessário haver o self._results
-    #     self._view = ViewFaultResults(self._dss, self._results)
-    #     self._settings = StudyTemporalSettings(_dss=self.dss)
+        self._results = VTCDresults(self._dss)
+        self._view = ViewVTCDresults(self._dss, self._results)
+
     @property
     def results(self):
         return self._results
@@ -25,8 +24,3 @@ class StudyVTCD(StudyBase):
     @property
     def view(self):
         return self._view
-
-#run area vulnerabilit
-#run outra coisa??????
-
-#incluir um run aqui, recebe bus name aqui.

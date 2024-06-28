@@ -31,7 +31,7 @@ class VTCDSagSwell:
 
         vmags_df, vangs_df = DSSTools(self._dss).results.circuit_vmag_vang_dfs()
         vmags_df['vmin'] = vmags_df.min(axis=1) #Cria uma coluna adicional e faz o mínimo das 3 anteriores.
-        vmags_df['vmax'] = vmags_df.iloc[:, :-1].max(axis=1)#Cria uma coluna adicional e faz o máximo das 3 primeiras
+        vmags_df['vmax'] = vmags_df.iloc[:, :-1].max(axis=1) #Cria uma coluna adicional e faz o máximo das 3 primeiras
 
         colors_sag = []
         for v_min in vmags_df['vmin']:
